@@ -3,18 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DemoDropdownAnchorTriggerComponent } from './demo-dropdown-anchor-trigger/demo-dropdown-anchor-trigger.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { TopTemplateComponent } from './top-template/top-template.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemoDropdownAnchorTriggerComponent 
-
+    TopTemplateComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BsDropdownModule,
+    CollapseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

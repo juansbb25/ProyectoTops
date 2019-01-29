@@ -1,10 +1,37 @@
-<span dropdown (onShown)="onShown()" (onHidden)="onHidden()" (isOpenChange)="isOpenChange()">
-  <a href id="basic-link" dropdownToggle (click)="false"
-     aria-controls="basic-link-dropdown">Click me for a dropdown, yo!</a>
-  <ul id="basic-link-dropdown" *dropdownMenu class="dropdown-menu"
-      role="menu" aria-labelledby="basic-link">
-    <li *ngFor="let choice of items">
-      <a class="dropdown-item" href="#">{{choice}}</a>
-    </li>
-  </ul>
-</span>
+<nav class="navbar navbar-expand-lg navbar-dark Mibarra"  >
+  <img src="https://png.pngtree.com/svg/20161118/t_logo_1186445.png" style="max-width:5%;width:auto;height:auto;">
+
+  <button class=" Micomponente navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="Micomponente collapse navbar-collapse" id="navbarSupportedContent" [collapse]="!isCollapsed">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link"  href="top1">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" >
+        <a class="nav-link" href="#">Descubrir</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Popular!</a>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a  class="nav-link dropdown-toggle MiDropdown" href="#" id="navbarDropdown" role="button" dropdownToggle aria-haspopup="true" aria-expanded="false">
+          Categorias
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" *dropdownMenu>
+          <a class="dropdown-item" href="top1">Categoria1</a>
+          <a class="dropdown-item" href="#">Categoria2</a>
+          <a class="dropdown-item" href="#">Categoria3</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="Mibtn  my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
