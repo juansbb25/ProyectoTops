@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tops';
+  x: number = 5;
+  y: number = 2;
 }

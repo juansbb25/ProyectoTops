@@ -1,0 +1,123 @@
+.card-img-top2 {
+
+    width: 70%;
+    margin: 10px;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    align-self: center;
+}
+
+.cardcentering{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.espacio {
+    background-color: rgba(255, 255, 0, 0);
+    padding: 10px;
+    margin: 10px;
+  }
+
+  
+
+.card2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 5px;
+  border-top-color: rgba(212,175,55, 0.5);
+  border-top-style: solid;
+  border-top-width: 5px;
+  border-right-color: rgba(212,175,55, 0.5);
+  border-right-style: solid;
+  border-right-width: 5px;
+  border-bottom-color: rgba(212,175,55, 0.5);
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-left-color: rgba(212,175,55, 0.5);
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  border-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.card3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 5px;
+  border-top-color: rgba(192,192,192, 0.5);
+  border-top-style: solid;
+  border-top-width: 5px;
+  border-right-color: rgba(192,192,192, 0.5);
+  border-right-style: solid;
+  border-right-width: 5px;
+  border-bottom-color: rgba(192,192,192, 0.5);
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-left-color: rgba(192,192,192, 0.5);
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  border-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.card4 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 5px;
+  border-top-color: rgba(205,127,50, 0.5);
+  border-top-style: solid;
+  border-top-width: 5px;
+  border-right-color: rgba(205,127,50, 0.5);
+  border-right-style: solid;
+  border-right-width: 5px;
+  border-bottom-color: rgba(205,127,50, 0.5);
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-left-color: rgba(205,127,50, 0.5);
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  border-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
