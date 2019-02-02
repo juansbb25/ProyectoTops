@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService  } from '../services/crud.service';
 
 @Component({
   selector: 'app-top-template',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopTemplateComponent implements OnInit {
 
-  constructor() { }
+  public tops = []
+
+  constructor( public _crud: CrudService) { }
 
   ngOnInit() {
+    this._crud.getTops().subscribe ( ( data : any ) => {
+      this.tops = [];
+      console.log(data)
+      data.forEach((data2 : any) => {
+        this.tops.push( data2.payload.doc.data())
+      } )
+      console.log(this.tops)
+    } )
   }
 
 }
