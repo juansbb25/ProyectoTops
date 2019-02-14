@@ -4,9 +4,12 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TopTemplateComponent } from './top-template/top-template.component';
 import {TOPComponent} from './top/top.component';
 import { RatingModule } from 'ngx-bootstrap/rating';
+import { FormularioComponent } from './formulario/formulario.component' 
+
 
 const routes: Routes = [
-  { path: 'top1', component: TOPComponent}
+  { path: 'top1', component: TOPComponent},
+  {path: 'formulario', component: FormularioComponent}
 ];
 
 

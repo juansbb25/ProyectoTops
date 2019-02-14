@@ -1,21 +1,31 @@
 <nav class="navbar navbar-expand-lg navbar-dark Mibarra"  >
-  <img src="https://png.pngtree.com/svg/20161118/t_logo_1186445.png" style="max-width:5%;width:auto;height:auto;">
+  <img src="http://www.carlogos.org/logo/Tesla-logo.png" style="max-width:50px;height:auto;min-width: 25px;">
 
   <button class=" Micomponente navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="Micomponente collapse navbar-collapse" id="navbarSupportedContent" [collapse]="!isCollapsed">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link"  href="top1">Inicio <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active" >
-        <a class="nav-link" href="#">Descubrir</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Popular!</a>
-      </li>
+    <ul class="navbar-nav mr-auto Menu-list">
+      
+        <li class="Menu-list-item nav-item" onclick>
+          Inicio
+          <span class="Mask"><span>Inicio</span></span>
+          <span class="Mask"><span>Inicio</span></span>
+        </li>
+      
+        <li class="Menu-list-item nav-item" onclick>
+            Descubrir
+            <span class="Mask"><span>Descubrir</span></span>
+            <span class="Mask"><span>Descubrir</span></span>
+        </li>
+
+        <li class="Menu-list-item nav-item" onclick>
+          Otros
+          <span class="Mask"><span>Otros</span></span>
+          <span class="Mask"><span>Otros</span></span>
+        </li>
+
       <li class="nav-item dropdown" dropdown>
         <a  class="nav-link dropdown-toggle MiDropdown" href="#" id="navbarDropdown" role="button" dropdownToggle aria-haspopup="true" aria-expanded="false">
           Categorias
@@ -29,7 +39,6 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="Mibtn  my-2 my-sm-0" type="submit">Buscar</button>
     </form>
   </div>
 </nav>

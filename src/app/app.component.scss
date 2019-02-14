@@ -1,6 +1,20 @@
+$perspective:     60rem;
+$font-size:       16px;
+$split-position:  55%;
+$split-thickness: 3px;
+$split-color:     #FF2C75;
+%font-settings {
+    font-family: "Gilroy ExtraBold", system-ui, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    font-kerning: normal;
+    -webkit-text-size-adjust: 100%;
+  }
+  
 .Mibarra
 {
-    background-color: rgba(232, 90, 95, 0.527);
+    background-color: #1a1a1d;
     
 }
 
@@ -10,6 +24,17 @@
     border-radius: 15px;
 }
 
+.Menu-list {
+    font-size: $font-size;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: rotateX(-5deg) rotateY(10deg); // overwritten by JS
+  }
+  
 button.Mibtn {
     background-color: #F9A300;
     border: none;
@@ -26,3 +51,57 @@ button.Mibtn:hover {
     cursor: pointer;
     background-color: #FABD44;
     }
+
+    // === Menu item =====
+.Menu-list-item {
+    position: relative;
+    color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    
+    // === Split Line =====
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: $split-position;
+      left: -10%;
+      right: -10%;
+      height: $split-thickness;
+      border-radius: $split-thickness;
+      margin-top: -($split-thickness / 2);
+      background: $split-color;
+      transform: scale(0);
+      transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+      z-index: 1;
+    }
+  }
+  
+  // === Top/bottom mask =====
+  .Mask {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    color: $split-color;
+    top: 0;
+    height: $split-position;
+    transition: all .8s cubic-bezier(.16,1.08,.38,.98);
+    
+    span { display: block; }
+  }
+  
+  // === Bottom mask specific =====
+  .Mask + .Mask {
+    top: $split-position - 0.1;
+    height: 10 - $split-position + 0.1;
+    
+    span { transform: translateY(-$split-position); }
+  }
+  
+  // === Where the fun stuff happens =====
+  .Menu-list-item:hover,
+  .Menu-list-item:active {
+    .Mask { color: #FFF; transform: skewX(12deg) translateX(1px); }
+    .Mask + .Mask { transform: skewX(12deg) translateX(-1px); }
+    &::before { transform: scale(1); }
+  }

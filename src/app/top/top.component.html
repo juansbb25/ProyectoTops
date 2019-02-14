@@ -1,11 +1,11 @@
-<div class="cardcentering">
-    <div class="espacio">
-        <div class="card2 text-center" style="width: 20rem;" >
-            <img src="https://pbs.twimg.com/profile_images/971359833826918400/G1aAQGO-_400x400.jpg" class="card-img-top2" >
+<div *ngIf="tops[1]" class="cardcentering">
+   
+        <div class="card-top card-gold text-center margen" style="width: 20rem;" >
+            <img  src={{tops[1].miembros[0].fotos}} class="card-img-top2" >
             <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <rating [max]="6" [(ngModel)]="y" [customTemplate]="tt"></rating>
+                    <h5 class="card-title" >{{tops[1].miembros[0].nombre}}</h5>
+                    <p class="card-text">{{tops[1].miembros[0].descripcion}}</p>
+                    <rating [max]="5" [(ngModel)]="y" [customTemplate]="tt"></rating>
                     <b>(<i>Rate:</i> {{y}})</b>
                     <ng-template #tt let-i="index" let-v="value">
                         <button class="btn btn-{{i < v ? 'warning' : 'default'}}">
@@ -13,18 +13,16 @@
                         </button>
                     </ng-template>
             </div>
-        </div>
+      
     </div>
-</div>
 
-<div class="cardcentering">
-    <div class="espacio">
-        <div class="card3 text-center" style="width: 20rem;" >
+    
+        <div class="card-top card-silver text-center margen" style="width: 20rem;" >
             <img src="https://yt3.ggpht.com/a-/AAuE7mDMTFI2lRoqt2Itv0Yw5sRT24kfT2APB2H72g=s900-mo-c-c0xffffffff-rj-k-no" class="card-img-top2" >
             <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <rating [max]="6" [(ngModel)]="y" [customTemplate]="tt"></rating>
+                    <rating [max]="5" [(ngModel)]="y" [customTemplate]="tt"></rating>
                     <b>(<i>Rate:</i> {{y}})</b>
                     <ng-template #tt let-i="index" let-v="value">
                         <button class="btn btn-{{i < v ? 'warning' : 'default'}}">
@@ -33,17 +31,14 @@
                     </ng-template>
             </div>
         </div>
-    </div>
-</div>
+    
 
-<div class="cardcentering">
-    <div class="espacio">
-        <div class="card4 text-center" style="width: 20rem;" >
+        <div class="card-top card-bronze text-center margen" style="width: 20rem;" >
             <img src="data:image/png;base64,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" class="card-img-top2" >
             <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <rating [max]="6" [(ngModel)]="y" [customTemplate]="tt"></rating>
+                    <rating [max]="5" [(ngModel)]="y" [customTemplate]="tt"></rating>
                     <b>(<i>Rate:</i> {{y}})</b>
                     <ng-template #tt let-i="index" let-v="value">
                         <button class="btn btn-{{i < v ? 'warning' : 'default'}}">
@@ -52,43 +47,5 @@
                     </ng-template>
             </div>
         </div>
-    </div>
 </div>
-
-<div class="cardcentering">
-    <div class="espacio">
-        <div class="card3 text-center" style="width: 20rem;" >
-            <img src="https://pbs.twimg.com/profile_images/971359833826918400/G1aAQGO-_400x400.jpg" class="card-img-top2" >
-            <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <rating [max]="6" [(ngModel)]="y" [customTemplate]="tt"></rating>
-                    <b>(<i>Rate:</i> {{y}})</b>
-                    <ng-template #tt let-i="index" let-v="value">
-                        <button class="btn btn-{{i < v ? 'warning' : 'default'}}">
-                            {{i < v ? '&#9733;' : '&#9734;'}}
-                        </button>
-                    </ng-template>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="cardcentering">
-    <div class="espacio">
-        <div class="card3 text-center" style="width: 20rem;" >
-            <img src="https://pbs.twimg.com/profile_images/971359833826918400/G1aAQGO-_400x400.jpg" class="card-img-top2" >
-            <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <rating [max]="6" [(ngModel)]="y" [customTemplate]="tt"></rating>
-                    <b>(<i>Rate:</i> {{y}})</b>
-                    <ng-template #tt let-i="index" let-v="value">
-                        <button class="btn btn-{{i < v ? 'warning' : 'default'}}">
-                            {{i < v ? '&#9733;' : '&#9734;'}}
-                        </button>
-                    </ng-template>
-            </div>
-        </div>
-    </div>
-</div>
+ 
